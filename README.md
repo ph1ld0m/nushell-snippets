@@ -32,29 +32,29 @@ snip show nmap version -g 0
 This can then be used in all kinds of manners, e.g.
 
 Replace the commandline with the selected command
-```
+```nushell
 snip show nmap version -g 0 | commandline edit -r $in
 ```
 
 Copy the selected command into the tmux buffer:
-```
+```nushell
 snip show nmap version -g 0 | tmux setb $in
 ```
 
 Copy the selected command into the clipboard buffer using xclip:
-```
+```nushell
 snip show nmap version -g 0 | xclip -selection clipboard
 ```
 
 Using the new `tee` command to print the command and then to copy it into the clipboard buffer using xclip:
-```
+```nushell
 snip show nmap version -g 0 | tee { to text | print } | xclip -selection clipboard
 ```
 
 ### Adding entries
 You can add entries using the `snip add` command:
 
-```
+```nushell
 snip add "list users using smb null session #win #enum" "netexec smb <dc-ip> -u <username> -p <password> --sam"
 ```
 
@@ -86,3 +86,5 @@ use <PATH>/snippets *
 
 ## Todo
 - [ ] Better examples, with example output
+- [ ] Maybe, remove rg as a dependency
+- [ ] Add my current `box` tool, which does substitutions, based on `<something>` syntax
