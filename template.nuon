@@ -1,0 +1,40 @@
+[
+  [
+    uuid,
+    v
+  ];
+  [
+    "735BD89C-5DAE-4AC4-938E-9ADF706F1526",
+    {
+      description: "Add IP address to interface #linux #network",
+      body: "ip addr add <ip_CIDR> dev <ifname>"
+    }
+  ],
+  [
+    "B23C1637-DC7D-42A0-9344-8F15DB0C4559",
+    {
+      description: "Scan all ports with version detection using a list of hosts in a file",
+      body: "nmap -Pn -A -p- -oA nmap_full_tcp-host -iL <hosts-file>"
+    }
+  ],
+  [
+    "62756028-EED8-48FB-B71D-3B1629F4FD72",
+    {
+      description: "Show inet routing table on OpenBSD showing labels and without resolving addresses",
+      body: "route -nv show -inet"
+    }
+  ],
+  [
+    "101F2134-E15E-49A2-8CE5-37D438029BF2",
+    {
+      description: [
+        "description one",
+        "description two"
+      ],
+      body: [
+        "step one",
+        "step two"
+      ]
+    }
+  ]
+]
